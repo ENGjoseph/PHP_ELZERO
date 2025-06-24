@@ -54,9 +54,9 @@ echo "<br>";
 echo str_repeat("Elzero ", 3);
 echo "<br>";
 echo "=========================================================<br>";
- /*
-    String Functions
-    - implode(Separator[Optional], Array[Required]) => join() Is Alias
+/*
+String Functions
+- implode(Separator[Optional], Array[Required]) => join() Is Alias
     - explode(Separator[Required], String[Required], Limit[Optional])
     - str_shuffle(String[Required])
     - strrev(String[Required])
@@ -76,37 +76,72 @@ echo "=========================================================<br>";
   echo implode(", ", $friends) . "<br>";
   echo implode("@@", $friends) . "<br>";
   echo implode($friends) . "<br>";
-
+  
   $str = "Elzero Web School Is Cool";
-
+  
   echo "<pre>";
   print_r(explode(" ", $str));
   echo "</pre>";
-
+  
   echo "<pre>";
   print_r(explode("I", $str));
   echo "</pre>";
-
+  
   echo "<pre>";
   print_r(explode(" ", $str, 3));
   echo "</pre>";
-
+  
   echo "<pre>";
   print_r(explode(" ", $str, -2));
   echo "</pre>";
 
   echo str_shuffle("Elzero") . "<br>";
   echo strrev("Elzero") . "<br>";
-
+  
   echo strlen("   Elzero  ") . "<br>";
   echo strlen(trim("   Elzero  ")) . "<br>";
 
   echo trim("#@@Elzero@@@###", "@") . "<br>";
-
+  
   echo rtrim("#@@Elzero@@@###", "#@") . "<br>";
   echo ltrim("#@@Elzero@@@###", "#@") . "<br>";
-echo "<br>";
-echo "<br>";
-echo "<br>";
-echo "<br>";
+  echo "=========================================================<br>";
+  
+  /*
+    String functions
+    - chunck split(String[Required], length[optional], End[optional])
+    - strlen(String[Required])
+    - str_split(Strint[Required], length[optional])
+    - strip_tags(String[Required], Allowed[Optional])
+    -nl2br(String[Required], XHTML[Optional])
+  */
+  echo chunk_split("Elzero web school", 3 , "@");
+  echo "<br>";
+  echo "<pre>";
+  print_r(str_split("Elzero"));
+  echo "</pre>";
+
+  echo "<pre>";
+  print_r(str_split("Elzero",2));
+  echo "</pre>";
+
+  echo "<br>";
+  echo strip_tags("<h3> Hello <b> Elzero </b> </h3>");
+  echo "<br>";
+  
+  echo strip_tags("<h3> Hello <b> Elzero </b> </h3>","<h3><b>");
+  echo "<br>";
+
+  echo nl2br("Elzero\nweb\nschool", false);
+  echo "<br>";
+  echo "=========================================================<br>";
+
+  /*
+    String functions
+    - strpos(String[Required], value[Required], Start position[optional]) Case-sensitive
+    - strrpos(String[Required], value[Required], Start position[optional]) Case-sensitive
+    - stripos(String[Required], value[Required], Start position[optional]) Case-sensitive
+    - strripos(String[Required], value[Required], Start position[optional]) Case-sensitive
+    - substr_count(String[Required], value[Required], Start position[optional], length[optional]) Case-sensitive
+  */
 ?>
